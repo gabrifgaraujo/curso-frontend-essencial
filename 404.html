@@ -1,0 +1,32 @@
+<!-- public/404.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Frontend Essencial - Redirecionando...</title>
+    <script type="text/javascript">
+      // Pega o caminho da URL que o usuário tentou acessar.
+      // Ex: /curso-frontend-essencial/html/primeiro-documento
+      var path = window.location.pathname;
+
+      // Pega o nome do segmento da URL (o nome do seu repositório).
+      // Ex: /curso-frontend-essencial
+      var repo = '/' + path.split('/')[1];
+
+      // Preserva a query string (parâmetros como ?id=123) e o hash (#secao).
+      var search = window.location.search;
+      var hash = window.location.hash;
+
+      // Armazena o caminho correto que o React Router deve carregar.
+      // sessionStorage é usado para passar a informação uma única vez.
+      sessionStorage.redirect = path;
+
+      // Redireciona o usuário para a raiz da aplicação (index.html),
+      // passando a query string e o hash originais.
+      window.location.replace(repo + search + hash);
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
