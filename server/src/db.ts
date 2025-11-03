@@ -1,5 +1,5 @@
 import { Pool } from 'pg';
-import '../loadEnv';
+import './loadEnv';
 
 const dbUrl = process.env.DATABASE_URL;
 if (!dbUrl) {
