@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    /* Configurações do Compilador */
+    "target": "ES2020",                // Compila para uma versão moderna do JavaScript
+    "module": "CommonJS",             // Usa o sistema de módulos padrão do Node.js
+    "moduleResolution": "Node",       // Estratégia de resolução de módulos do Node.js
+    "outDir": "./dist",               // Onde o JavaScript compilado será salvo (para produção)
+    "rootDir": "./src",               // Onde está o nosso código TypeScript
+
+    /* Verificações de Tipo Estritas */
+    "strict": true,                   // Habilita todas as verificações de tipo estritas
+    "noImplicitAny": true,            // Erro em variáveis com tipo 'any' implícito
+
+    /* Interoperabilidade de Módulos */
+    "esModuleInterop": true,          // Permite compatibilidade entre CommonJS e Módulos ES
+    "forceConsistentCasingInFileNames": true, // Garante que os nomes dos arquivos sejam consistentes
+
+    /* Configurações Avançadas */
+    "skipLibCheck": true              // Pula a verificação de tipos dos arquivos de declaração (.d.ts)
+  },
+  "include": [
+    "src/**/*"                        // Quais arquivos o TypeScript deve compilar
+  ],
+  "exclude": [
+    "node_modules"                    // Quais pastas ignorar
+  ]
+}

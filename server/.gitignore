@@ -1,0 +1,33 @@
+# Arquivos de Dependências
+# Esta pasta contém milhares de arquivos e é a coisa mais importante a ser ignorada.
+# Ela pode ser reconstruída a qualquer momento com 'npm install'.
+node_modules
+
+# Arquivos de Ambiente e Segredos
+# JAMAIS envie suas senhas e chaves de API para o GitHub!
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Pasta de Build do TypeScript
+# O TypeScript compila os arquivos .ts para .js nesta pasta.
+# Ela é gerada automaticamente e não deve ser versionada.
+dist
+
+# Logs de Erro e Debug
+# Arquivos de log que podem conter informações sensíveis.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Arquivos de Cache de Ferramentas
+.npm
+.pnpm-store
+.yarn-cache
+
+# Arquivos de Sistema Operacional
+.DS_Store
+Thumbs.db
