@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import * as React from 'react'
 import Markdown from './Markdown';
 import NavButton from './NavButton';
 import { Tldraw } from 'tldraw';
+
+const TLDRAW_LICENSE_KEY = process.env.VITE_TLDRAW_LICENSE_KEY || '';
 import 'tldraw/tldraw.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
@@ -102,7 +105,7 @@ const ContentPage: React.FC<ContentPageProps> = ({
           )}
           
           <div className='relative w-full h-[500px]'>
-            <Tldraw persistenceKey={persistenceKey} />
+            <Tldraw licenseKey={TLDRAW_LICENSE_KEY} persistenceKey={persistenceKey} />
           </div>
         </div>
       </div>
