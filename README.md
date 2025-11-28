@@ -9,38 +9,37 @@
 
 Este repositório contém o código-fonte de uma plataforma de e-learning completa, desenvolvida para demonstrar a arquitetura de uma aplicação web moderna, desde o backend robusto até um frontend reativo e interativo. O projeto foi construído com uma stack **TypeScript-first**, garantindo segurança de tipos e manutenibilidade em todo o ecossistema.
 
-**[Acesse a versão de produção do frontend aqui!](https://gabrifgaraujo.github.io/curso-frontend-essencial/ )**
-*(Nota: As funcionalidades de backend como login, XP e ranking requerem que o servidor esteja em produção em um serviço de hospedagem separado).*
+**[Acesse a versão de produção do frontend aqui](https://gabrifgaraujo.github.io/curso-frontend-essencial/ )**
 
 ---
 
-## 🚀 Funcionalidades Principais
+## Funcionalidades Principais
 
 O projeto vai além de um simples site de conteúdo, implementando funcionalidades que criam uma experiência de usuário engajadora e dinâmica.
 
 ### Funcionalidades do Lado do Servidor (Backend)
 
-*   ✅ **Autenticação Segura com JWT:** Sistema completo de registro e login com senhas criptografadas (`bcrypt`) e gerenciamento de sessão via JSON Web Tokens.
-*   ✅ **Middleware de Proteção de Rotas:** Garante que apenas usuários autenticados possam acessar endpoints sensíveis.
-*   ✅ **Sistema de Gamificação (XP e Níveis):** Usuários ganham pontos de experiência (XP) ao completar lições, com um sistema que calcula e atribui novos níveis automaticamente.
-*   ✅ **Prevenção de Duplicidade:** Lógica para impedir que um usuário ganhe XP pela mesma lição múltiplas vezes.
-*   ✅ **Ranking de Usuários:** Uma API pública que retorna uma lista dos melhores usuários, ordenada por XP e nível, para fomentar a competição saudável.
-*   ✅ **Integração com IA Generativa:** Um endpoint que se conecta à **Groq API** para gerar desafios de estudo dinâmicos e contextuais, utilizando o modelo Llama 3.
+*   ✓ **Autenticação Segura com JWT:** Sistema completo de registro e login com senhas criptografadas (`bcrypt`) e gerenciamento de sessão via JSON Web Tokens.
+*   ✓ **Middleware de Proteção de Rotas:** Garante que apenas usuários autenticados possam acessar endpoints sensíveis.
+*   ✓ **Sistema de Gamificação (XP e Níveis):** Usuários ganham pontos de experiência (XP) ao completar lições, com um sistema que calcula e atribui novos níveis automaticamente.
+*   ✓ **Prevenção de Duplicidade:** Lógica para impedir que um usuário ganhe XP pela mesma lição múltiplas vezes.
+*   ✓ **Ranking de Usuários:** Uma API pública que retorna uma lista dos melhores usuários, ordenada por XP e nível, para fomentar a competição saudável.
+*   ✓ **Integração com IA Generativa:** Um endpoint que se conecta à **Groq API** para gerar desafios de estudo dinâmicos e contextuais, utilizando o modelo Llama 3.
 
 ### Funcionalidades do Lado do Cliente (Frontend)
 
-*   ✅ **Gerenciamento de Estado Global:** Uso da **Context API** do React para gerenciar o estado de autenticação do usuário em toda a aplicação de forma eficiente.
-*   ✅ **Roteamento Inteligente:** Navegação fluida com **React Router**, incluindo:
+*   ✓ **Gerenciamento de Estado Global:** Uso da **Context API** do React para gerenciar o estado de autenticação do usuário em toda a aplicação de forma eficiente.
+*   ✓ **Roteamento Inteligente:** Navegação fluida com **React Router**, incluindo:
     *   **Rotas Protegidas:** Apenas usuários logados podem acessar o conteúdo do curso.
     *   **Redirecionamento Automático:** Usuários são redirecionados para a página de login e, após o sucesso, retornam à página que tentaram acessar.
-*   ✅ **Interface Reativa:** O `Header` e outros componentes mudam dinamicamente para refletir o estado de login do usuário.
-*   ✅ **Aprendizado Ativo com Quadro Branco:** Integração com a biblioteca **Tldraw** para fornecer um quadro branco digital em cada lição.
-*   ✅ **Desafios Gerados por IA:** O frontend consome a API de IA para exibir desafios únicos em cada página, incentivando o aprendizado ativo.
-*   ✅ **Notificações em Tempo Real:** Feedback visual para o usuário através de "toasts" (`react-hot-toast`) para ações como ganho de XP, level up e erros.
+*   ✓ **Interface Reativa:** O `Header` e outros componentes mudam dinamicamente para refletir o estado de login do usuário.
+*   ✓ **Aprendizado Ativo com Quadro Branco:** Integração com a biblioteca **Tldraw** para fornecer um quadro branco digital em cada lição.
+*   ✓ **Desafios Gerados por IA:** O frontend consome a API de IA para exibir desafios únicos em cada página, incentivando o aprendizado ativo.
+*   ✓ **Notificações em Tempo Real:** Feedback visual para o usuário através de "toasts" (`react-hot-toast`) para ações como ganho de XP, level up e erros.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 <details>
 <summary><strong>Backend (Server)</strong></summary>
@@ -52,7 +51,6 @@ O projeto vai além de um simples site de conteúdo, implementando funcionalidad
 *   **Autenticação:** JSON Web Token (JWT), Bcrypt.js
 *   **Validação:** Zod
 *   **Comunicação com DB:** `pg` (node-postgres)
-*   **IA:** `groq-sdk`
 *   **Dev Tools:** `ts-node-dev`, `dotenv`
 
 </details>
@@ -75,7 +73,7 @@ O projeto vai além de um simples site de conteúdo, implementando funcionalidad
 
 ---
 
-## ⚙️ Como Executar o Projeto Localmente
+## Como Executar o Projeto Localmente
 
 Para rodar este projeto, você precisará de dois terminais abertos simultaneamente, um para o backend e outro para o frontend.
 
@@ -84,7 +82,6 @@ Para rodar este projeto, você precisará de dois terminais abertos simultaneame
 *   Node.js (v18 ou superior)
 *   npm ou pnpm
 *   Uma string de conexão para um banco de dados PostgreSQL.
-*   Uma chave de API da [Groq](https://console.groq.com/keys ).
 
 ### 1. Configuração do Backend
 
@@ -122,7 +119,7 @@ A aplicação estará acessível em `http://localhost:5173` (ou outra porta indi
 
 ---
 
-## 🚀 Deploy
+## Deploy
 
 O frontend está configurado para deploy no GitHub Pages.
 
