@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import * as React from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 // Contextos e Serviços
 import { AuthProvider } from './contexts/AuthContext';
@@ -143,7 +143,7 @@ import UsoEtico from './pages/IA/04-ia';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <Toaster
           position="bottom-right"
@@ -302,7 +302,7 @@ function App() {
           </main>
         </div>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
