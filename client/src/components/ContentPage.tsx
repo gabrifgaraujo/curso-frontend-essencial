@@ -9,7 +9,7 @@ import { useAuth } from '../contexts/AuthContext';
 import api from '../services/api';
 import toast from 'react-hot-toast';
 
-const TLDRAW_LICENSE_KEY = import.meta.env.VITE_TLDRAW_LICENSE_KEY || '';
+const TLDRAW_LICENSE_KEY = import.meta.env.TLDRAW_LICENSE_KEY || '';
 
 interface ContentPageProps {
   content: string;
